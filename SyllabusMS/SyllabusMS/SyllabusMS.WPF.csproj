@@ -1,0 +1,17 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net8.0-windows</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <UseWPF>true</UseWPF>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\SyllabusMS.Business\SyllabusMS.Business.csproj" />
+    <ProjectReference Include="..\SyllabusMS.Control\SyllabusMS.Control.csproj" />
+    <ProjectReference Include="..\SyllabusMS.Entity\SyllabusMS.Entity.csproj" />
+  </ItemGroup>
+
+</Project>
