@@ -38,6 +38,7 @@ public class List extends javax.swing.JFrame {
         jButton1 = new javax.swing.JButton();
         btnUpdate = new javax.swing.JButton();
         jButton2 = new javax.swing.JButton();
+        jButton3 = new javax.swing.JButton();
 
         jToolBar1.setRollover(true);
 
@@ -71,6 +72,13 @@ public class List extends javax.swing.JFrame {
             }
         });
 
+        jButton3.setText("Delete");
+        jButton3.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton3ActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
@@ -83,7 +91,9 @@ public class List extends javax.swing.JFrame {
                         .addGap(182, 182, 182)
                         .addComponent(jButton1)
                         .addGap(58, 58, 58)
-                        .addComponent(btnUpdate))
+                        .addComponent(btnUpdate)
+                        .addGap(63, 63, 63)
+                        .addComponent(jButton3))
                     .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 718, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addContainerGap(86, Short.MAX_VALUE))
         );
@@ -96,7 +106,8 @@ public class List extends javax.swing.JFrame {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jButton1)
                     .addComponent(btnUpdate)
-                    .addComponent(jButton2))
+                    .addComponent(jButton2)
+                    .addComponent(jButton3))
                 .addContainerGap(146, Short.MAX_VALUE))
         );
 
@@ -127,6 +138,18 @@ public class List extends javax.swing.JFrame {
         NewJFrame1 aa = new NewJFrame1();
         aa.setVisible(true);
     }//GEN-LAST:event_jButton2ActionPerformed
+
+    private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
+        String a = jList1.getSelectedValue();
+        DeleteForm.deleteForm(a);
+        DeleteForm.deleteForm(a+"Table");
+        DeleteForm.deleteForm(a+"Table2");
+        DeleteForm.deleteForm(a+"Table3");
+        DeleteForm.deleteForm(a+"Table4");
+        this.setVisible(false);
+        List l1 = new List();
+        l1.setVisible(true);
+    }//GEN-LAST:event_jButton3ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -171,6 +194,7 @@ public class List extends javax.swing.JFrame {
     private javax.swing.JButton btnUpdate;
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton2;
+    private javax.swing.JButton jButton3;
     private javax.swing.JList<String> jList1;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JToolBar jToolBar1;
